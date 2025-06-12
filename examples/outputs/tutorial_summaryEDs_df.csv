@@ -1,0 +1,7 @@
+"Site","Condition","Species","Timepoint","Mean_ED5","SD_ED5","SE_ED5","Conf_Int_5","Mean_ED50","SD_ED50","SE_ED50","Conf_Int_50","Mean_ED95","SD_ED95","SE_ED95","Conf_Int_95"
+"Feldberg","Nursery","Porites germania",420,36.31,0.75,0.24,0.53,37.98,0.42,0.13,0.3,39.74,0.46,0.14,0.33
+"Feldberg","Wild","Porites germania",420,37.02,0.42,0.13,0.3,38.24,0.35,0.11,0.25,39.49,0.41,0.13,0.3
+"Zugspitze","Nursery","Acropora germania",420,36.74,0.57,0.18,0.41,38.24,0.21,0.07,0.15,39.8,0.38,0.12,0.27
+"Zugspitze","Nursery","Porites germania",420,36.18,0.53,0.17,0.38,37.93,0.19,0.06,0.14,39.77,0.47,0.15,0.33
+"Zugspitze","Wild","Acropora germania",420,37.06,0.21,0.07,0.15,38.44,0.09,0.03,0.07,39.88,0.23,0.07,0.16
+"Zugspitze","Wild","Porites germania",420,36.87,0.39,0.12,0.28,38.53,0.24,0.07,0.17,40.27,0.34,0.11,0.24

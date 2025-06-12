@@ -1,0 +1,13 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Colin"
+    given-names: "Luigi"
+    orcid: https://orcid.org/0000-0002-6966-2817
+  - family-names: "Voolstra"
+    given-names: "Christian R"
+    orcid: https://orcid.org/0000-0003-4555-3795
+title: "shiny-for-cbassed50: R Shiny app to process CBASS-derived PAM data"
+version: 0.0.1
+doi: 10.5281/zenodo.8370644 #TODO: Update this link
+date-released: 2025-12-01 #TODO: Update this date

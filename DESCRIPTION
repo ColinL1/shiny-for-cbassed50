@@ -1,0 +1,34 @@
+Type: Package
+Package: shinycbassed50
+Title: Shiny App to Process CBASS-Derived PAM Data
+Version: 0.0.1
+Authors@R: c(
+    person(given = "Luigi", family = "Colin",
+            email = "luigi.colin@uni-konstanz.de", role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0002-6966-2817")),
+    person(given = "Christian Robert", family = "Voolstra",
+            email = "christian.voolstra@uni-konstanz.de", role = c("aut"),
+            comment = c(ORCID = "0000-0003-4555-3795")))
+Maintainer: Luigi Colin <luigi.colin@uni-konstanz.de>
+Description: Shiny tools to process CBASS-derived PAM data efficiently. Minimal requirements are PAM-based photosynthetic efficiency data (or data from any other continuous variable that changes with temperature, e.g. relative bleaching scores) from 4 coral samples (nubbins) subjected to 4 temperature profiles of at least 2 colonies from 1 coral species from 1 site. Please refer to the following CBASS (Coral Bleaching Automated Stress System) papers for in-depth information regarding CBASS acute thermal stress assays, experimental design considerations, and ED5/ED50/ED95 thermal parameters: Nicolas R. Evensen et al. (2023) <doi:10.1002/lom3.10555> Christian R. Voolstra et al. (2020) <doi:10.1111/gcb.15148> Christian R. Voolstra et al. (2025) <doi:10.1146/annurev-marine-032223-024511>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0),
+    shinytest2
+Config/testthat/edition: 3
+Imports: 
+    shiny,
+    bslib,
+    DT,
+    dplyr,
+    ggplot2,
+    CBASSED50,
+    shinycssloaders,
+    shinyjs,
+    colourpicker
+Depends: 
+    R (>= 2.10)
+Date: 2025-06-013
