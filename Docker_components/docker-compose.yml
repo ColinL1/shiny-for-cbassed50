@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  shiny:
+    container_name: shiny_cbass
+    build: .
+    ports:
+      - "3838:3838"
+    environment:
+      - R_LIBS_USER=/opt/conda/lib/R/library
+    restart: unless-stopped
+    volumes:
+      - /home/colinl/.config/swag/config:/config
+      - /home/colinl/Proj/CBASS_ED50/CBASSED50/Uploaded_xlsx:/home/data/Uploaded_xlsx
+    networks:
+      - swag_net
+
+networks:
+  swag_net:
+    external: true
+
