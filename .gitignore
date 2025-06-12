@@ -3,3 +3,4 @@
 *.Rcheck
 Uploaded_xlsx
 temp_backup
+*.tar.gz
