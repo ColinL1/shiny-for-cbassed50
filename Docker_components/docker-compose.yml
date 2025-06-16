@@ -10,8 +10,8 @@ services:
       - R_LIBS_USER=/opt/conda/lib/R/library
     restart: unless-stopped
     volumes:
-      - /home/colinl/.config/swag/config:/config
-      - /home/colinl/Proj/CBASS_ED50/CBASSED50/Uploaded_xlsx:/home/data/Uploaded_xlsx
+      - local-path-to-swag-config:/config
+      - local-path-to-uploaded-data:/home/data/Uploaded_xlsx
     networks:
       - swag_net
 
