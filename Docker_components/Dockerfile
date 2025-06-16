@@ -17,9 +17,7 @@ RUN set -ex && \
 COPY shinycbassed50_0.0.1.tar.gz /tmp/shinycbassed50_0.0.1.tar.gz
 
 COPY install_packages.R /tmp/install_packages.R
-# COPY install_packages_R.sh /tmp/install_packages_R.sh
 
-# RUN chown shiny:shiny /tmp/install_packages_R.sh
 RUN chown shiny:shiny /tmp/install_packages.R
 
 # Run the package installation script
@@ -27,13 +25,6 @@ RUN chmod +x /tmp/install_packages.R
 
 # Modify your RUN command to:
 RUN Rscript /tmp/install_packages.R
-
-# Set file permissions for the shiny user
-# RUN chown -R shiny:shiny /srv/shiny-server/shiny_cbass
-
-# # Install the R package from the tar.gz
-# RUN R -e "install.packages('/tmp/CBASSED50_0.2.1.tar.gz', repos=NULL, type='source')"
-# RUN R -e "install.packages('/tmp/shinycbass_0.0.1.tar.gz', repos=NULL, type='source')"
 
 # Instead, create an app.R that loads your package and runs the app:
 COPY app.R /srv/shiny-server/shiny_cbass/
