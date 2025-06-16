@@ -28,7 +28,7 @@ install.packages("CBASSED50")
 
 If you want to contribute to a project and make it better, your help is very welcome.
 
-You can always report an [issue](https://github.com/reefgenomics/CBASSED50/issues) or fork this repository, implement/fix your feature, and create a pull request.
+You can always report an [issue](https://github.com/ColinL1/shiny-for-cbassed50/issues) or fork this repository, implement/fix your feature, and create a pull request.
 
 ## FAQ
 Needs the CBASSED50 package to run
