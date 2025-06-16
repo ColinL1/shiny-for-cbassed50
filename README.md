@@ -1,6 +1,7 @@
-
 # shiny-for-cbassed50
 Shiny wrapper to process CBASS-derived PAM data efficiently and interactively
+
+**Note:** This project is intended for use within the coralfuture.org implementation and is not designed for direct end-user interaction.
 
 # UNDER CONSTRUCTION
 
@@ -23,7 +24,6 @@ You can install the latest version of CBASSED50 from GitHub:
 install.packages("CBASSED50")
 ```
 
-
 ## Contributing
 
 If you want to contribute to a project and make it better, your help is very welcome.
@@ -32,3 +32,5 @@ You can always report an [issue](https://github.com/ColinL1/shiny-for-cbassed50/
 
 ## FAQ
 Needs the CBASSED50 package to run
+
+See the [README](docker_components/README.md) in the `docker_components` directory for instructions on how to run the Docker container.
