@@ -27,6 +27,7 @@
 #' @importFrom DT renderDT
 #' @importFrom ggplot2 ggsave
 #' @importFrom utils data
+#' @import CBASSED50
 #'
 #' @seealso \code{\link{preprocess_dataset}}, \code{\link{read_data}}, \code{\link{process_dataset}},
 #'   \code{\link{calculate_eds}}, \code{\link{fit_curve_eds}}, \code{\link{plot_ED50_box}},
@@ -37,9 +38,19 @@
 app_server <- function(input, output, session) {
     cat("Server started\n")
 
-    session$onSessionEnded(function() { ## TODO: to be implemented for broweser side of the app
+    session$onSessionEnded(function() { ## TODO: to be implemented for broweser side of the app
         stopApp()
     })
+
+    output$download_template <- shiny::downloadHandler(
+        filename = function() {
+            "cbass_template.xlsx"
+        },
+        content = function(file) {
+            template_path <- base::system.file("extdata", "example.xlsx", package = "shinycbass")
+            base::file.copy(template_path, file)
+        }
+    )
 
     shiny::observe({
         if (input$example == TRUE) {
@@ -255,6 +266,4 @@ app_server <- function(input, output, session) {
             )
         }
     )
-    # Add bs_themer() for live theme customization
-    bslib::bs_themer()
 }

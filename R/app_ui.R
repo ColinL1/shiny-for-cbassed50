@@ -28,7 +28,7 @@
 app_ui <- function() {
     cat("UI loaded\n")
       shiny::fluidPage(
-      theme = bslib::bs_theme(version = 5),  # Use Bootstrap 4 for better responsiveness
+      theme = bslib::bs_theme(bootswatch = "cerulean"),
       shinyjs::useShinyjs(),
       shiny::titlePanel("Hello CBASSEDNs!"),
       shiny::p('Preview of a Shiny application for visualizing CBASS "EDNs" data.'),
@@ -36,8 +36,8 @@ app_ui <- function() {
       shiny::fluidRow(
         shiny::column(
             width = 12,
-            bslib::input_switch('example', label = 'Example Data', value = TRUE, width = 3)
-            # shiny::radioButtons('dropdown', label = 'Input type', choices = c("Example Data", "Upload"), inline = TRUE)
+            bslib::input_switch('example', label = 'Example Data', value = FALSE, width = 3),
+            shiny::p(shiny::downloadLink('download_template', 'Get template xlsx', style = "font-size: 12px;"))
         )
       ),
       
@@ -56,8 +56,7 @@ app_ui <- function() {
             shiny::textInput('drm_formula', label = 'DRM Formula', value = 'Pam_value ~ Temperature'),
             shiny::textInput('grouping_properties', label = 'Grouping Properties', value = 'Site, Condition, Species, Timepoint'),
             shiny::sliderInput("size_text", "Size text", min = 6, max = 20, value = 12, step = 0.5),
-            shiny::sliderInput("size_points", "Size points", min = 1, max = 6, value = 2.5, step = 0.25),
-            colourpicker::colourInput("plot_color", "Select Plot Color", value = "#0073C2")  # Add color selector
+            shiny::sliderInput("size_points", "Size points", min = 1, max = 6, value = 2.5, step = 0.25)
             )
         ),
         shiny::column(
